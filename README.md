@@ -1,0 +1,2 @@
+# city_weather_pusher
+每日定时指定城市天气推送，基于python编程语言及flask开发框架开发，使用了高德开放平台api及钉钉推送api
