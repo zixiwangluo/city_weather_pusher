@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时天气预报</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="weather-card" id="weatherCard">
+        
+        <div class="loading" id="loadingSpinner">
+            <div class="spinner"></div>
+            <p>正在加载天气数据...</p>
+        </div>
+
+        <div class="weather-content" id="weatherContent" style="display: none;">
+            <div class="header">
+                <h1 id="city">--</h1>
+                <p id="reportTime">--</p>
+            </div>
+
+            <div class="current-weather">
+                <div class="icon" id="currentIcon">☀️</div>
+                <div class="details">
+                    <div class="temp" id="currentTemp">--°C</div>
+                    <div class="desc" id="currentDesc">--</div>
+                </div>
+            </div>
+            
+            <p class="forecast-title">未来3天预报</p>
+            <div class="forecast-container" id="forecastContainer">
+                </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
